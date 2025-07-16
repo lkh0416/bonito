@@ -22,7 +22,6 @@ from bonito.util import column_to_set, load_symbol, load_model, init, tqdm_envir
 
 
 def main(args):
-
     init(args.seed, args.device)
 
     try:
@@ -197,3 +196,8 @@ def argparser():
     parser.add_argument("--mm2-preset", default='lr:hq', type=str)
     parser.add_argument('-v', '--verbose', action='count', default=0)
     return parser
+
+# added for custom run
+if __name__ == "__main__":
+    args = argparser().parse_args()
+    main(args)

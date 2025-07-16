@@ -24,3 +24,6 @@ tmp/
 *.npy
 .vscode/
 *nsys-rep
+
+# custom
+save/
