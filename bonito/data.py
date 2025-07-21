@@ -30,6 +30,7 @@ class ModelSetup:
 
 
 def load_data(data, model_setup, compute_settings):
+
     try:
         if (Path(data.training_data) / "chunks.npy").exists():
             print(f"[loading data] - chunks from {data.training_data}")

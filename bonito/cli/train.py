@@ -102,6 +102,7 @@ def main(args):
     else:
         lr = float(args.lr)
     optim_kwargs = config.get("optim", {})
+
     trainer.fit(workdir, args.epochs, lr, **optim_kwargs)
 
 def argparser():
@@ -134,3 +135,7 @@ def argparser():
     parser.add_argument("--num-workers", default=4, type=int)
     return parser
 
+# added for custom run
+if __name__ == "__main__":
+    args = argparser().parse_args()
+    main(args)
